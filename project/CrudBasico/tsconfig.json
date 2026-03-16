@@ -1,0 +1,27 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "es2020",
+    "typeRoots": ["node_modules/@types", "app/SERVICES/authadmin.service"],
+    "paths": {
+      "@auth0/angular-jwt": ["node_modules/@auth0/angular-jwt"],
+      "chart.js": ["node_modules/chart.js"]
+    },
+    
+  
+    "lib": [
+      "es2018",
+      "dom"
+    ]
+  }
+}

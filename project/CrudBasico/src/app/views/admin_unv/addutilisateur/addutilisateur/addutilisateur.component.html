@@ -1,0 +1,88 @@
+<div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+    <div class="wrapper wrapper--w790">
+      <div class="card card-5">
+        <div class="card-heading">
+          <h2 class="title">Ajouter les Utilisateur D'application</h2>
+        </div>
+        <div class="card-body">
+          <form (ngSubmit)="addUser()" #userForm="ngForm">
+            <div class="form-row">
+              <div class="name">Nom</div>
+              <div class="value">
+                <div class="input-group">
+                  <input class="input--style-5" type="text" name="nom" [(ngModel)]="user.nom" required>
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="name">Prenom</div>
+              <div class="value">
+                <div class="input-group">
+                  <input class="input--style-5" type="text" name="prenom" [(ngModel)]="user.prenom" required>
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="name">Email</div>
+              <div class="value">
+                <div class="input-group">
+                  <input class="input--style-5" type="email" name="email" [(ngModel)]="user.email" required>
+                </div>
+              </div>
+            </div>
+            <div class="form-row m-b-55">
+              <div class="name">Mot De Passe</div>
+              <div class="value">
+                <div class="row row-refine">
+                  <div class="col-9">
+                    <div class="input-group-desc">
+                      <input class="input--style-5" type="password" name="mdp" [(ngModel)]="user.mdp" required>
+                      <label class="label--desc">Mot De Passe</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="name">Role</div>
+              <div class="value">
+                <div class="input-group">
+                  <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" [(ngModel)]="user.role"	>
+                    <option value="" selected>--choisir le role d'Utilisateur--</option>
+                    <option >etablissement</option>
+                    <option >membre</option>
+                    <option >université</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="name">Nom de l'établissement:</div>
+              <div class="value">
+                <div class="input-group">
+                  <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" [(ngModel)]="user.Nom_Etablissement"	>
+                    <option value="">--Veuillez choisir une option--</option>
+                    <option>FSJEG Jendouba</option>
+                    <option>ISSH Jendouba</option>
+                    <option>ISMT kef</option>
+                    <option>ISEAH kef</option>
+                    <option>islai Beja</option>
+                    <option>isam Siliana</option>
+                    <option>isi kef</option>
+                    <option>isb Beja</option>
+                    <option>isp Tabarka</option>
+                    <option>issi kef</option>
+                    <option>esier Medjez El Bab</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+              <div class="form-row p-t-20">
+                <button class="btn btn--radius-2 btn--blue" type="submit">Ajouter</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    

@@ -1,0 +1,42 @@
+
+<div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+    <div class="wrapper wrapper--w680">
+        <div class="card card-4">
+            <div class="card-body">
+                <h2 class="title">Cette interface permet d'ajouter les étudiants convoqués. </h2>
+                <form method="POST">
+                    <div class="row row-space">
+                        <div class="col">
+                            <div class="input-group">
+                                <label class="label">Nom et Prénom:</label>
+                                <input  [(ngModel)]="sanction.nomprenom"class="input--style-4" type="text" name="first_name">
+                            </div>
+                        </div>
+                        <div class="col-0">
+                            <div class="input-group">
+                                <label class="label">Sanction:</label><br><br>
+                                
+                                <textarea class="form-control" [(ngModel)]="sanction.sanction" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-space">
+                        <div class="col-0">
+                            <div class="input-group">
+                                <label class="label">Date:     </label>
+                                <div class="input-group-icon">
+                                    <input [(ngModel)]="sanction.date"class="input--style-4 js-datepicker" type="date" name="birthday">
+                                    <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-t-15">
+                        <button   (click)="agregar()"class="btn btn--radius-2 btn--blue" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

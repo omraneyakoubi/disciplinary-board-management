@@ -1,0 +1,122 @@
+<div class="container-fluid px-1 py-5 mx-auto">
+    <div class="row d-flex justify-content-center">
+        <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+            <div class="card">
+                <h5 class="text-center mb-4">Préparation De La réunion de Conseil De Discipline</h5>
+                <form class="form-card">
+                    <div class="row justify-content-between text-left" *ngIf="step1">
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Date
+                                *<span class="text-danger"> *</span></label> <input [(ngModel)]="equipo.date"
+                                type="date" id="fname" name="fname" placeholder="Date de réunion"> </div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                class="form-control-label px-3">Emplacement<span class="text-danger"> *</span></label>
+                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"
+                                [(ngModel)]="equipo.emplacement	">
+                                <option value="">--Veuillez choisir une option--</option>
+                                <option>FSJEG Jendouba</option>
+                                <option>ISSH Jendouba</option>
+                                <option>ISMT kef</option>
+                                <option>ISEAH kef</option>
+                                <option>islai Beja</option>
+                                <option>isam Siliana</option>
+                                <option>isi kef</option>
+                                <option>isb Beja</option>
+                                <option>isp Tabarka</option>
+                                <option>issi kef</option>
+                                <option>esier Medjez El Bab</option>
+                            </select>
+                        </div>
+                        <span *ngIf="erreurdate" class="alert alert-danger">error date existe </span>
+
+                    </div>
+                    <div class="row justify-content-between text-left" *ngIf="step2">
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Nom
+                                et Prénom<span class="text-danger"> *</span></label> <input
+                                [(ngModel)]="etudiant.nomprenom" type="text" id="email" name="email" placeholder="">
+                        </div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                class="form-control-label px-3">CIN<span class="text-danger"> *</span></label> <input
+                                [(ngModel)]="etudiant.cin" type="text" id="mob" name="mob" placeholder=""> </div>
+                    </div>
+                    <div class="row justify-content-between text-left" *ngIf="step2">
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                class="form-control-label px-3">Genre<span class="text-danger"> *</span></label>
+                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                <option value="">--Veuillez choisir une option--</option>
+                                <option [(ngModel)]="etudiant.genre">Homme</option>
+                                <option [(ngModel)]="etudiant.genre">Femme</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                class="form-control-label px-3">Email *<span class="text-danger"> *</span></label>
+                            <input [(ngModel)]="etudiant.email" type="text" id="mob" name="mob" placeholder="">
+                        </div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                class="form-control-label px-3">Numéro De Téléphone *<span class="text-danger">
+                                    *</span></label> <input [(ngModel)]="etudiant.numtel" type="number"
+                                placeholder="Enter your ccupation" required>
+                        </div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                class="form-control-label px-3">Niveau d'étude<span class="text-danger">
+                                    *</span></label>
+                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"
+                                [(ngModel)]="etudiant.nivetud">
+                                <option value="">--Veuillez choisir une option--</option>
+                                <option value="1">Bac+1</option>
+                                <option value="2">Bac+2</option>
+                                <option value="3">Terminal</option>
+                                <option value="4">Master+1</option>
+                                <option value="4">Master+2</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                class="form-control-label px-3">Classe
+                                *<span class="text-danger"> *</span></label> <input [(ngModel)]="etudiant.classe"
+                                type="text" placeholder="classe" required> </div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                class="form-control-label px-3">Objet de convocation
+                                *<span class="text-danger"> *</span></label> <textarea [(ngModel)]="etudiant.objet"
+                                class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea> </div>
+                        <div class="form-group col-sm-6 flex-column d-flex">
+
+                            <label for="formFileMultiple" class="form-label">Rapport</label>
+                            <input [(ngModel)]="etudiant.rapport" class="form-control" type="file" id="formFileMultiple"
+                                multiple />
+                        </div>
+                        <div class="form-group col-sm-6 flex-column d-flex">
+
+                            <label for="formFileMultiple" class="form-label">Questionnaire</label>
+                            <input [(ngModel)]="etudiant.quest" class="form-control" type="file" id="formFileMultiple"
+                                multiple />
+                        </div>
+                        <div class="form-group col-sm-6 flex-column d-flex">
+
+                            <label for="formFileMultiple" class="form-label">Convocation</label>
+                            <input [(ngModel)]="etudiant.conv" class="form-control" type="file" id="formFileMultiple"
+                                multiple />
+                        </div>
+                        <span *ngIf="error2" class="alert alert-danger">error date existe </span>
+
+                        <div class="form-group col-sm-6 flex-column d-flex" style="margin-top: 30px;">
+
+                            <button type="submit" class="btn-block btn-warning" *ngIf="step2"
+                                (click)="addetud()">{{btnInfo}}</button>
+                        </div>
+                    </div>
+
+
+                    <div class="row justify-content-end">
+                        <div class="form-group col-sm-6"> <button type="submit" class="btn-block btn-primary"
+                                (click)="step1fn()" *ngIf="step1">Next</button> </div>
+                        <div class="form-group col-sm-6"> <button type="submit" class="btn-block btn-primary"
+                                *ngIf="step2 && this.tabetud.length" (click)="agregar()" routerLink="/admin/reunion">Ajouter</button> </div>
+                                <div class="form-group col-sm-6"> <button type="submit" class="btn-block btn-danger"
+                                    *ngIf="step2"  routerLink="/admin/reunion">Cancel</button> </div>
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

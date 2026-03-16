@@ -1,0 +1,33 @@
+<body>
+  <div class="test">
+    <section>
+      <br><br><br><br><br>
+      <div class="container" id="container">
+        <div class="form-container sign-in-container">
+          <form #f="ngForm" (ngSubmit)="loginadmin(f)">
+            <img class="img" src="/assets/img/logo.png" alt="">
+            <h1>S'identifier</h1>
+            <br><br>
+            <span>Votre Compte</span>
+            <input type="email" placeholder="Email" name="email" #email="ngModel" ngModel required>
+            <input type="password" placeholder="Mot De Passe" name="password" #password="ngModel" ngModel required>
+            <a href="#">Mot De Passe Oublié ?</a>
+            <button class="button" type="submit">S'identifier</button>
+            <div class="error" *ngIf="error">
+              {{ error }}
+            </div>
+          </form>
+        </div>
+        <div class="overlay-container">
+          <div class="overlay"></div>
+        </div>
+      </div>
+      <footer>
+        <p class="cp-text">
+          © Copyright 2023 université jendouba.
+          All rights reserved.
+        </p>
+      </footer>
+    </section>
+  </div>
+</body>

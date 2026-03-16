@@ -1,0 +1,49 @@
+
+<div class="container-fluid px-1 py-5 mx-auto">
+    <div class="row d-flex justify-content-center">
+        <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+            <div class="card">
+                <h5 class="text-center mb-4">Préparation De La réunion de Conseil De Discipline</h5>
+                <form class="form-card">
+                    <div class="row justify-content-between text-left" >
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Date
+                                *<span class="text-danger"> *</span></label> <input [(ngModel)]="objetud.date" [value]='this.objetud.date'
+                                type="date" id="fname" name="fname" placeholder="Date de réunion"></div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                class="form-control-label px-3">Emplacement<span class="text-danger"> *</span></label>
+                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"
+                                [(ngModel)]="objetud.emplacement">
+                                <option value="">--Veuillez choisir une option--</option>
+                                <option>FSJEG Jendouba</option>
+                                <option>ISSH Jendouba</option>
+                                <option>ISMT kef</option>
+                                <option>ISEAH kef</option>
+                                <option>islai Beja</option>
+                                <option>isam Siliana</option>
+                                <option>isi kef</option>
+                                <option>isb Beja</option>
+                                <option>isp Tabarka</option>
+                                <option>issi kef</option>
+                                <option>esier Medjez El Bab</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <span *ngIf="erreurdate" class="alert alert-danger">erreur La réunion et existe </span>
+
+
+                    <div class="row justify-content-end">
+                    
+                        <div class="form-group col-sm-6"> <button type="submit" class="btn-block btn-primary"
+                             (click)="edit()"  >Modifier</button> </div>
+                        
+                                <div class="form-group col-sm-6"> <button type="submit" class="btn-block btn-danger"
+                                    routerLink="/admin/reunion">Cancel</button> </div>
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,231 @@
+<body>
+   
+   
+<br>
+<div class="container" >
+    <p>Préparation De La réunion de Conseil De Discipline </p>
+
+    <button routerLink="/admin/addreunion" type="button" class="btn btn-dark">Ajouter </button>
+<!---->
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+           
+            <th scope="col">Date</th>
+             <th scope="col">Emplacement </th>
+            
+           
+            
+             
+            <th scope="col">Modifier</th>
+            <th scope="col">Info</th>
+            <th scope="col">Supprimer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let equipo of ListarEquipo">
+          
+            <th>{{equipo.id_equipo}}</th>
+           
+            <td>{{equipo.date}}</td>
+            <td>{{equipo.emplacement}}</td>
+            
+            <td>
+                <button (click)="modificar(equipo.id_equipo)" type="button" class="btn btn-primary" >Modifier</button>
+            </td>
+            <td>
+            <button (click)="getetud(equipo.id_equipo)" type="button" class="btn btn-success" data-bs-toggle="modal"  data-bs-target="#exampleModal" >Info</button>
+          </td>
+            <td>
+                <button (click)="eliminar(equipo.id_equipo)" type="button" class="btn btn-danger "  >Supprimer</button>
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+ 
+ 
+</div>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+           
+            <th scope="col">Nomprenom</th>
+             <th scope="col">cin </th>
+             <th scope="col">genre </th>
+             <th scope="col">email </th>
+             <th scope="col">numtel </th>
+             <th scope="col">niveau </th>
+             <th scope="col">classe </th>
+             <th scope="col">objet </th>
+             <th scope="col"></th>
+          
+            
+            
+           
+            
+             
+           
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let etud of listetud">
+          
+            <th>{{etud.id}}</th>
+           
+            <td>{{etud.nomprenom}}</td>
+            <td>{{etud.cin}}</td>
+            <td>{{etud.genre}}</td>
+            <td>{{etud.email}}</td>
+            <td>{{etud.numtel}}</td>
+            <td>{{etud.nivetud}}</td>
+            <td>{{etud.classe}}</td>
+            <td>{{etud.objet}}</td>
+
+            <td><button class="btn btn-primary" (click)="suppetud(etud.id)" >supprimée</button></td>
+
+         
+          </tr>
+        </tbody>
+      </table> 
+      <button class="btn btn-primary" (click)="addetudiantbtn()"  >Ajouter</button>
+      <form class="form-card" *ngIf="addetudbtn">
+
+      <div class="row justify-content-between text-left" >
+        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Nom
+                et Prénom<span class="text-danger"> *</span></label> <input
+                [(ngModel)]="etudiant.nomprenom" type="text" id="email" name="email" placeholder="">
+        </div>
+        <div class="form-group col-sm-6 flex-column d-flex"> <label
+                class="form-control-label px-3">CIN<span class="text-danger"> *</span></label> <input
+                [(ngModel)]="etudiant.cin" type="text" id="mob" name="mob" placeholder=""> </div>
+    </div>
+    <div class="row justify-content-between text-left" >
+        <div class="form-group col-sm-6 flex-column d-flex"> <label
+                class="form-control-label px-3">Genre<span class="text-danger"> *</span></label>
+            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                <option value="">--Veuillez choisir une option--</option>
+                <option [(ngModel)]="etudiant.genre">Homme</option>
+                <option [(ngModel)]="etudiant.genre">Femme</option>
+            </select>
+        </div>
+        <div class="form-group col-sm-6 flex-column d-flex"> <label
+                class="form-control-label px-3">Email *<span class="text-danger"> *</span></label>
+            <input [(ngModel)]="etudiant.email" type="text" id="mob" name="mob" placeholder="">
+        </div>
+        <div class="form-group col-sm-6 flex-column d-flex"> <label
+                class="form-control-label px-3">Numéro De Téléphone *<span class="text-danger">
+                    *</span></label> <input [(ngModel)]="etudiant.numtel" type="number"
+                placeholder="Enter your ccupation" required>
+        </div>
+        <div class="form-group col-sm-6 flex-column d-flex"> <label
+                class="form-control-label px-3">Niveau d'étude<span class="text-danger">
+                    *</span></label>
+            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"
+                [(ngModel)]="etudiant.nivetud">
+                <option value="">--Veuillez choisir une option--</option>
+                <option value="1">Bac+1</option>
+                <option value="2">Bac+2</option>
+                <option value="3">Terminal</option>
+                <option value="4">Master+1</option>
+                <option value="4">Master+2</option>
+            </select>
+        </div>
+        <div class="form-group col-sm-6 flex-column d-flex"> <label
+                class="form-control-label px-3">Classe
+                *<span class="text-danger"> *</span></label> <input [(ngModel)]="etudiant.classe"
+                type="text" placeholder="classe" required> </div>
+        <div class="form-group col-sm-6 flex-column d-flex"> <label
+                class="form-control-label px-3">Objet de convocation
+                *<span class="text-danger"> *</span></label> <textarea [(ngModel)]="etudiant.objet"
+                class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea> </div>
+        <div class="form-group col-sm-6 flex-column d-flex">
+
+            <label for="formFileMultiple" class="form-label">Rapport</label>
+            <input [(ngModel)]="etudiant.rapport" class="form-control" type="file" id="formFileMultiple"
+                multiple />
+        </div>
+        <div class="form-group col-sm-6 flex-column d-flex">
+
+            <label for="formFileMultiple" class="form-label">Questionnaire</label>
+            <input [(ngModel)]="etudiant.quest" class="form-control" type="file" id="formFileMultiple"
+                multiple />
+        </div>
+        <div class="form-group col-sm-6 flex-column d-flex">
+
+            <label for="formFileMultiple" class="form-label">Convocation</label>
+            <input [(ngModel)]="etudiant.conv" class="form-control" type="file" id="formFileMultiple"
+                multiple />
+        </div>
+
+        <div class="form-group col-sm-6 flex-column d-flex" style="margin-top: 30px;">
+
+            <button type="submit" class="btn-block btn-warning" (click)="confirmeadd()">test</button>
+        </div>
+    </div>  
+  </form>
+      <div class="modal-footer">
+        <button class="btn btn-primary" data-bs-target="#exampleModal2" data-bs-toggle="modal">Dossiers</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" id="exampleModal2"
+     aria-labelledby="myHugeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Rapport</th>
+            <th scope="col">questionnaire </th>
+            <th scope="col">convocation</th>
+            
+            
+            
+           
+            
+             
+           
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let etud of listetud">
+          
+            <th>{{etud.rapport}}</th>
+           
+            <td>{{etud.quest}}</td>
+            <td>{{etud.conv}}</td>
+          
+         
+          </tr>
+        </tbody>
+      </table>    
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+
+
+

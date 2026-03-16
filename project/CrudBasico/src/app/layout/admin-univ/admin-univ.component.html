@@ -1,0 +1,339 @@
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+    <title>
+      Soft UI Dashboard by Creative Tim
+    </title>
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <!-- Nucleo Icons -->
+    <link href="/CRUD BASICO/CrudBasico/src/assets/assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="/CRUD BASICO/CrudBasico/src/assets/assets/css/nucleo-svg.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <link href="/CRUD BASICO/CrudBasico/src/assets/assets/css/nucleo-svg.css" rel="stylesheet" />
+</head>
+<body class="g-sidenav-show  bg-gray-100">
+    <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 " id="sidenav-main">
+      <div class="sidenav-header">
+        <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+        <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/soft-ui-dashboard/pages/dashboard.html " target="_blank">
+          <img src="data:image/png;base64,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" class="navbar-brand-img h-250" alt="main_logo">
+          <br><br><span class="ms-1 font-weight-bold"> </span>
+        </a>
+      </div>
+      <hr class="horizontal dark mt-0">
+      <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link  active" routerLink="/adminuniv/dashboard">
+              <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <title>shop </title>
+                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g transform="translate(-1716.000000, -439.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                      <g transform="translate(1716.000000, 291.000000)">
+                        <g transform="translate(0.000000, 148.000000)">
+                          <path class="color-background opacity-6" d="M46.7199583,10.7414583 L40.8449583,0.949791667 C40.4909749,0.360605034 39.8540131,0 39.1666667,0 L7.83333333,0 C7.1459869,0 6.50902508,0.360605034 6.15504167,0.949791667 L0.280041667,10.7414583 C0.0969176761,11.0460037 -1.23209662e-05,11.3946378 -1.23209662e-05,11.75 C-0.00758042603,16.0663731 3.48367543,19.5725301 7.80004167,19.5833333 L7.81570833,19.5833333 C9.75003686,19.5882688 11.6168794,18.8726691 13.0522917,17.5760417 C16.0171492,20.2556967 20.5292675,20.2556967 23.494125,17.5760417 C26.4604562,20.2616016 30.9794188,20.2616016 33.94575,17.5760417 C36.2421905,19.6477597 39.5441143,20.1708521 42.3684437,18.9103691 C45.1927731,17.649886 47.0084685,14.8428276 47.0000295,11.75 C47.0000295,11.3946378 46.9030823,11.0460037 46.7199583,10.7414583 Z"></path>
+                          <path class="color-background" d="M39.198,22.4912623 C37.3776246,22.4928106 35.5817531,22.0149171 33.951625,21.0951667 L33.92225,21.1107282 C31.1430221,22.6838032 27.9255001,22.9318916 24.9844167,21.7998837 C24.4750389,21.605469 23.9777983,21.3722567 23.4960833,21.1018359 L23.4745417,21.1129513 C20.6961809,22.6871153 17.4786145,22.9344611 14.5386667,21.7998837 C14.029926,21.6054643 13.533337,21.3722507 13.0522917,21.1018359 C11.4250962,22.0190609 9.63246555,22.4947009 7.81570833,22.4912623 C7.16510551,22.4842162 6.51607673,22.4173045 5.875,22.2911849 L5.875,44.7220845 C5.875,45.9498589 6.7517757,46.9451667 7.83333333,46.9451667 L19.5833333,46.9451667 L19.5833333,33.6066734 L27.4166667,33.6066734 L27.4166667,46.9451667 L39.1666667,46.9451667 C40.2482243,46.9451667 41.125,45.9498589 41.125,44.7220845 L41.125,22.2822926 C40.4887822,22.4116582 39.8442868,22.4815492 39.198,22.4912623 Z"></path>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <span class="nav-link-text ms-1">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  " routerLink="/adminuniv/users">
+              <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <title>office</title>
+                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g transform="translate(-1869.000000, -293.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                      <g transform="translate(1716.000000, 291.000000)">
+                        <g id="office" transform="translate(153.000000, 2.000000)">
+                          <path class="color-background opacity-6" d="M12.25,17.5 L8.75,17.5 L8.75,1.75 C8.75,0.78225 9.53225,0 10.5,0 L31.5,0 C32.46775,0 33.25,0.78225 33.25,1.75 L33.25,12.25 L29.75,12.25 L29.75,3.5 L12.25,3.5 L12.25,17.5 Z"></path>
+                          <path class="color-background" d="M40.25,14 L24.5,14 C23.53225,14 22.75,14.78225 22.75,15.75 L22.75,38.5 L19.25,38.5 L19.25,22.75 C19.25,21.78225 18.46775,21 17.5,21 L1.75,21 C0.78225,21 0,21.78225 0,22.75 L0,40.25 C0,41.21775 0.78225,42 1.75,42 L40.25,42 C41.21775,42 42,41.21775 42,40.25 L42,15.75 C42,14.78225 41.21775,14 40.25,14 Z M12.25,36.75 L7,36.75 L7,33.25 L12.25,33.25 L12.25,36.75 Z M12.25,29.75 L7,29.75 L7,26.25 L12.25,26.25 L12.25,29.75 Z M35,36.75 L29.75,36.75 L29.75,33.25 L35,33.25 L35,36.75 Z M35,29.75 L29.75,29.75 L29.75,26.25 L35,26.25 L35,29.75 Z M35,22.75 L29.75,22.75 L29.75,19.25 L35,19.25 L35,22.75 Z"></path>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <span class="nav-link-text ms-1">Utilisateur</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  " routerLink="/adminuniv/etablissement">
+              <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <title>credit-card</title>
+                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g transform="translate(-2169.000000, -745.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                      <g transform="translate(1716.000000, 291.000000)">
+                        <g transform="translate(453.000000, 454.000000)">
+                          <path class="color-background opacity-6" d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z"></path>
+                          <path class="color-background" d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z"></path>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <span class="nav-link-text ms-1">Etablissement</span>
+            </a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link  " routerLink="/adminuniv/reunion">
+              <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                <svg width="12px" height="12px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <title>settings</title>
+                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g transform="translate(-2020.000000, -442.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                      <g transform="translate(1716.000000, 291.000000)">
+                        <g transform="translate(304.000000, 151.000000)">
+                          <polygon class="color-background opacity-6" points="18.0883333 15.7316667 11.1783333 8.82166667 13.3333333 6.66666667 6.66666667 0 0 6.66666667 6.66666667 13.3333333 8.82166667 11.1783333 15.315 17.6716667"></polygon>
+                          <path class="color-background opacity-6" d="M31.5666667,23.2333333 C31.0516667,23.2933333 30.53,23.3333333 30,23.3333333 C29.4916667,23.3333333 28.9866667,23.3033333 28.48,23.245 L22.4116667,30.7433333 L29.9416667,38.2733333 C32.2433333,40.575 35.9733333,40.575 38.275,38.2733333 L38.275,38.2733333 C40.5766667,35.9716667 40.5766667,32.2416667 38.275,29.94 L31.5666667,23.2333333 Z"></path>
+                          <path class="color-background" d="M33.785,11.285 L28.715,6.215 L34.0616667,0.868333333 C32.82,0.315 31.4483333,0 30,0 C24.4766667,0 20,4.47666667 20,10 C20,10.99 20.1483333,11.9433333 20.4166667,12.8466667 L2.435,27.3966667 C0.95,28.7083333 0.0633333333,30.595 0.00333333333,32.5733333 C-0.0583333333,34.5533333 0.71,36.4916667 2.11,37.89 C3.47,39.2516667 5.27833333,40 7.20166667,40 C9.26666667,40 11.2366667,39.1133333 12.6033333,37.565 L27.1533333,19.5833333 C28.0566667,19.8516667 29.01,20 30,20 C35.5233333,20 40,15.5233333 40,10 C40,8.55166667 39.685,7.18 39.1316667,5.93666667 L33.785,11.285 Z"></path>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <span class="nav-link-text ms-1">Réunion</span>
+            </a>
+          </li>
+          <li class="nav-item mt-3">
+            <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Account pages</h6>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  " (click)="lougaout()">
+              <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                <svg width="12px" height="12px" viewBox="0 0 46 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <title>customer-support</title>
+                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g transform="translate(-1717.000000, -291.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                      <g transform="translate(1716.000000, 291.000000)">
+                        <g transform="translate(1.000000, 0.000000)">
+                          <path class="color-background opacity-6" d="M45,0 L26,0 C25.447,0 25,0.447 25,1 L25,20 C25,20.379 25.214,20.725 25.553,20.895 C25.694,20.965 25.848,21 26,21 C26.212,21 26.424,20.933 26.6,20.8 L34.333,15 L45,15 C45.553,15 46,14.553 46,14 L46,1 C46,0.447 45.553,0 45,0 Z"></path>
+                          <path class="color-background" d="M22.883,32.86 C20.761,32.012 17.324,31 13,31 C8.676,31 5.239,32.012 3.116,32.86 C1.224,33.619 0,35.438 0,37.494 L0,41 C0,41.553 0.447,42 1,42 L25,42 C25.553,42 26,41.553 26,41 L26,37.494 C26,35.438 24.776,33.619 22.883,32.86 Z"></path>
+                          <path class="color-background" d="M13,28 C17.432,28 21,22.529 21,18 C21,13.589 17.411,10 13,10 C8.589,10 5,13.589 5,18 C5,22.529 8.568,28 13,28 Z"></path>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <span class="nav-link-text ms-1">Log Out</span>
+            </a>
+          </li>
+         
+        </ul>
+      </div>
+    
+    </aside>
+    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+      <!-- Navbar -->
+      <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" navbar-scroll="true">
+        <div class="container-fluid py-1 px-3">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+              <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
+              <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Dashboard</li>
+            </ol>
+            <h6 class="font-weight-bolder mb-0">Dashboard</h6>
+          </nav>
+          <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+            <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+              <div class="input-group">
+                <span class="input-group-text text-body"><i class="fas fa-search" aria-hidden="true"></i></span>
+                <input type="text" class="form-control" placeholder="Type here...">
+              </div>
+            </div>
+            <ul class="navbar-nav  justify-content-end">
+              <li class="nav-item d-flex align-items-center">
+                <a class="btn btn-outline-primary btn-sm mb-0 me-3" target="_blank" href="https://www.creative-tim.com/builder/soft-ui?ref=navbar-dashboard">Admin Université</a>
+              </li>
+              <li class="nav-item d-flex align-items-center">
+                <a (click)="lougaout()" class="nav-link text-body font-weight-bold px-0">
+                  <i class="fa fa-user me-sm-1"></i>
+                  <span class="d-sm-inline d-none">lougout</span>
+                </a>
+              </li>
+              <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+                <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
+                  <div class="sidenav-toggler-inner">
+                    <i class="sidenav-toggler-line"></i>
+                    <i class="sidenav-toggler-line"></i>
+                    <i class="sidenav-toggler-line"></i>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item px-3 d-flex align-items-center">
+                <a href="javascript:;" class="nav-link text-body p-0">
+                  <i class="fa fa-cog fixed-plugin-button-nav cursor-pointer"></i>
+                </a>
+              </li>
+              <li class="nav-item dropdown pe-2 d-flex align-items-center">
+                <a href="javascript:;" class="nav-link text-body p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fa fa-bell cursor-pointer"></i>
+                </a>
+                <ul class="dropdown-menu  dropdown-menu-end  px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
+                  <li class="mb-2">
+                    <a class="dropdown-item border-radius-md" href="javascript:;">
+                      <div class="d-flex py-1">
+                        <div class="my-auto">
+                          <img src="../assets/img/team-2.jpg" class="avatar avatar-sm  me-3 ">
+                        </div>
+                        <div class="d-flex flex-column justify-content-center">
+                          <h6 class="text-sm font-weight-normal mb-1">
+                            <span class="font-weight-bold">New message</span> from Laur
+                          </h6>
+                          <p class="text-xs text-secondary mb-0 ">
+                            <i class="fa fa-clock me-1"></i>
+                            13 minutes ago
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a class="dropdown-item border-radius-md" href="javascript:;">
+                      <div class="d-flex py-1">
+                        <div class="my-auto">
+                          <img src="../assets/img/small-logos/logo-spotify.svg" class="avatar avatar-sm bg-gradient-dark  me-3 ">
+                        </div>
+                        <div class="d-flex flex-column justify-content-center">
+                          <h6 class="text-sm font-weight-normal mb-1">
+                            <span class="font-weight-bold">New album</span> by Travis Scott
+                          </h6>
+                          <p class="text-xs text-secondary mb-0 ">
+                            <i class="fa fa-clock me-1"></i>
+                            1 day
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item border-radius-md" href="javascript:;">
+                      <div class="d-flex py-1">
+                        <div class="avatar avatar-sm bg-gradient-secondary  me-3  my-auto">
+                          <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <title>credit-card</title>
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                              <g transform="translate(-2169.000000, -745.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                                <g transform="translate(1716.000000, 291.000000)">
+                                  <g transform="translate(453.000000, 454.000000)">
+                                    <path class="color-background" d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z" opacity="0.593633743"></path>
+                                    <path class="color-background" d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z"></path>
+                                  </g>
+                                </g>
+                              </g>
+                            </g>
+                          </svg>
+                        </div>
+                        <div class="d-flex flex-column justify-content-center">
+                          <h6 class="text-sm font-weight-normal mb-1">
+                            Payment successfully completed
+                          </h6>
+                          <p class="text-xs text-secondary mb-0 ">
+                            <i class="fa fa-clock me-1"></i>
+                            2 days
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+      <div class="container-fluid py-4">
+        
+      <router-outlet></router-outlet>
+        <footer class="footer pt-3  ">
+          <div class="container-fluid">
+            <p class="cp-text center">
+              © Copyright 2023 université jendouba. All rights reserved.
+          </p>
+          </div>
+        </footer>
+      </div>
+    </main>
+    <div class="fixed-plugin">
+      <a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
+        <i class="fa fa-cog py-2"> </i>
+      </a>
+      <div class="card shadow-lg ">
+        <div class="card-header pb-0 pt-3 ">
+          <div class="float-start">
+            <h5 class="mt-3 mb-0">Soft UI Configurator</h5>
+            <p>See our dashboard options.</p>
+          </div>
+          <div class="float-end mt-4">
+            <button class="btn btn-link text-dark p-0 fixed-plugin-close-button">
+              <i class="fa fa-close"></i>
+            </button>
+          </div>
+          <!-- End Toggle Button -->
+        </div>
+        <hr class="horizontal dark my-1">
+        <div class="card-body pt-sm-3 pt-0">
+          <!-- Sidebar Backgrounds -->
+          <div>
+            <h6 class="mb-0">Sidebar Colors</h6>
+          </div>
+          <a href="javascript:void(0)" class="switch-trigger background-color">
+            <div class="badge-colors my-2 text-start">
+              <span class="badge filter bg-gradient-primary active" data-color="primary" onclick="sidebarColor(this)"></span>
+              <span class="badge filter bg-gradient-dark" data-color="dark" onclick="sidebarColor(this)"></span>
+              <span class="badge filter bg-gradient-info" data-color="info" onclick="sidebarColor(this)"></span>
+              <span class="badge filter bg-gradient-success" data-color="success" onclick="sidebarColor(this)"></span>
+              <span class="badge filter bg-gradient-warning" data-color="warning" onclick="sidebarColor(this)"></span>
+              <span class="badge filter bg-gradient-danger" data-color="danger" onclick="sidebarColor(this)"></span>
+            </div>
+          </a>
+          <!-- Sidenav Type -->
+          <div class="mt-3">
+            <h6 class="mb-0">Sidenav Type</h6>
+            <p class="text-sm">Choose between 2 different sidenav types.</p>
+          </div>
+          <div class="d-flex">
+            <button class="btn bg-gradient-primary w-100 px-3 mb-2 active" data-class="bg-transparent" onclick="sidebarType(this)">Transparent</button>
+            <button class="btn bg-gradient-primary w-100 px-3 mb-2 ms-2" data-class="bg-white" onclick="sidebarType(this)">White</button>
+          </div>
+          <p class="text-sm d-xl-none d-block mt-2">You can change the sidenav type just on desktop view.</p>
+          <!-- Navbar Fixed -->
+          <div class="mt-3">
+            <h6 class="mb-0">Navbar Fixed</h6>
+          </div>
+          <div class="form-check form-switch ps-0">
+            <input class="form-check-input mt-1 ms-auto" type="checkbox" id="navbarFixed" onclick="navbarFixed(this)">
+          </div>
+          <hr class="horizontal dark my-sm-4">
+          <a class="btn bg-gradient-dark w-100" href="https://www.creative-tim.com/product/soft-ui-dashboard">Free Download</a>
+          <a class="btn btn-outline-dark w-100" href="https://www.creative-tim.com/learning-lab/bootstrap/license/soft-ui-dashboard">View documentation</a>
+          <div class="w-100 text-center">
+            <a class="github-button" href="https://github.com/creativetimofficial/soft-ui-dashboard" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star creativetimofficial/soft-ui-dashboard on GitHub">Star</a>
+            <h6 class="mt-3">Thank you for sharing!</h6>
+            <a href="https://twitter.com/intent/tweet?text=Check%20Soft%20UI%20Dashboard%20made%20by%20%40CreativeTim%20%23webdesign%20%23dashboard%20%23bootstrap5&amp;url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fsoft-ui-dashboard" class="btn btn-dark mb-0 me-2" target="_blank">
+              <i class="fab fa-twitter me-1" aria-hidden="true"></i> Tweet
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/soft-ui-dashboard" class="btn btn-dark mb-0 me-2" target="_blank">
+              <i class="fab fa-facebook-square me-1" aria-hidden="true"></i> Share
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  

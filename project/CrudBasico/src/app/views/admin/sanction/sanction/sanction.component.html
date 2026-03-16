@@ -1,0 +1,44 @@
+<body>
+
+  <div class="container">
+    <p>Ajouter un membre de etablissement pour chaque établissement un membre pour presenter l etablissement
+    </p>
+
+    <button routerLink="/admin/addsanction" type="button" class="btn btn-dark">Ajouter </button>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Nom et Prenom </th>
+          <th scope="col">Date</th>
+          <th scope="col">Sanction</th>
+
+
+          <th scope="col">Modifier</th>
+          <th scope="col">Supprimer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let sanction of sanctionList;index as i">
+          <td>{{sanction.id}}</td>
+          <td>{{sanction.nomprenom}}</td>
+          <td>{{sanction.date}}</td>
+          <td>{{sanction.sanction}}</td>
+
+
+
+          <td>
+            <button (click)="edit(sanction)" type="button" class="btn btn-primary">Modifier</button>
+          </td>
+          <td>
+            <button  (click)="delete(sanction.id,i)" type="button" class="btn btn-danger">Supprimer</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+ 
+</body>

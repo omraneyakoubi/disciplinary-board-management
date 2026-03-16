@@ -1,0 +1,208 @@
+<body>
+    <div class="container">
+        <header>Préparation De La réunion de Conseil De Discipline
+        </header>
+
+        <form action="#" (ngSubmit)="submit()">
+            <div class="form first">
+                <div class="details personal" *ngIf="step==1">
+                    <span class="title">Personal Details</span>
+
+                    <div class="fields">
+
+
+                        <div class="field padding-bottom--30">
+                            <label for="email">Date</label>
+                            <input type="date" name="date">
+                        </div>
+                        <div class="field padding-bottom--24">
+                            <div class="grid--50-50">
+                                <label for="password">choisir l'emplacement de reunion</label>
+
+                            </div>
+                            <select  [(ngModel)]="membre.etablissement">
+                                <option value="">--Veuillez choisir une option--</option>
+                                <option>FSJEG Jendouba</option>
+                                <option>ISSH Jendouba</option>
+                                <option>ISMT kef</option>
+                                <option>ISEAH kef</option>
+                                <option>islai Beja</option>
+                                <option>isam Siliana</option>
+                                <option>isi kef</option>
+                                <option>isb Beja</option>
+                                <option>isp Tabarka</option>
+                                <option>issi kef</option>
+                                <option>esier Medjez El Bab</option>
+                            </select>
+                          
+                        </div>
+
+
+
+
+                    
+
+                    </div>
+                </div>
+
+                <div class="details ID" *ngIf="step==2">
+                    <span class="title">Niveau Details</span>
+
+
+
+
+
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Nom et Prénom*</label>
+                            <input [(ngModel)]="equipo.nomprenom" type="text" placeholder="Enter your name" required>
+                        </div>
+
+
+
+
+
+                        <div class="input-field">
+                            <label>CIN * </label>
+                            <input [(ngModel)]="equipo.cin" type="number" placeholder="Enter mobile number" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Genre*</label>
+                            <select required>
+                                <option disabled selected>Select genre</option>
+                                <option [(ngModel)]="equipo.genre">Homme</option>
+                                <option [(ngModel)]="equipo.genre">Femme</option>
+                                <option [(ngModel)]="equipo.genre">Autres..</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Email *</label>
+                            <input [(ngModel)]="equipo.email" type="email" placeholder="Enter your ccupation" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Numéro De Téléphone *</label>
+                            <input [(ngModel)]="equipo.numtel" type="number" placeholder="Enter your ccupation"
+                                required>
+                        </div>
+                        <div class="input-field">
+                            <label>Niveau d'étude *</label>
+                            <select required [(ngModel)]="equipo.nivetud">
+                                <option disabled selected>sélectionner votre niveau</option>
+                                <option value="1">Bac+1</option>
+                                <option value="2">Bac+2</option>
+                                <option value="3">Terminal</option>
+                                <option value="4">Master+1</option>
+                                <option value="4">Master+2</option>
+                            </select>
+                        </div>
+                      
+
+                        <div class="input-field">
+                            <label>Objet de convocation *</label>
+                            <textarea [(ngModel)]="equipo.objet" class="form-control" id="exampleFormControlTextarea1"
+                                rows="3"></textarea>
+
+                        </div>
+
+                   
+
+
+                    </div>
+                    
+                    
+                </div>
+                <!--steeeeeeeeppp3 -->
+                <div class="details ID" *ngIf="step==3">
+                    <span class="title">Niveau Details</span>
+
+
+
+
+
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Nom et Prénom*</label>
+                            <input [(ngModel)]="equipo.nomprenom" type="text" placeholder="Enter your name" required>
+                        </div>
+
+
+
+
+
+                        <div class="input-field">
+                            <label>CIN * </label>
+                            <input [(ngModel)]="equipo.cin" type="number" placeholder="Enter mobile number" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Genre*</label>
+                            <select required>
+                                <option disabled selected>Select genre</option>
+                                <option [(ngModel)]="equipo.genre">Homme</option>
+                                <option [(ngModel)]="equipo.genre">Femme</option>
+                                <option [(ngModel)]="equipo.genre">Autres..</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Email *</label>
+                            <input [(ngModel)]="equipo.email" type="email" placeholder="Enter your ccupation" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Numéro De Téléphone *</label>
+                            <input [(ngModel)]="equipo.numtel" type="number" placeholder="Enter your ccupation"
+                                required>
+                        </div>
+                        <div class="input-field">
+                            <label>Niveau d'étude *</label>
+                            <select required [(ngModel)]="equipo.nivetud">
+                                <option disabled selected>sélectionner votre niveau</option>
+                                <option value="1">Bac+1</option>
+                                <option value="2">Bac+2</option>
+                                <option value="3">Terminal</option>
+                                <option value="4">Master+1</option>
+                                <option value="4">Master+2</option>
+                            </select>
+                        </div>
+                      
+
+                        <div class="input-field">
+                            <label>Objet de convocation *</label>
+                            <textarea [(ngModel)]="equipo.objet" class="form-control" id="exampleFormControlTextarea1"
+                                rows="3"></textarea>
+
+                        </div>
+
+                   
+
+
+                    </div>
+                    
+                    
+                </div>
+                <div class="btn-group" role="group" aria-label="Un groupe de boutons">
+                    
+                            <button *ngIf="step!=1" (click)="previous()">
+                    <span class="btn btn-primary ">Previous</span>
+                </button>
+            <button  *ngIf="step!=3">
+                <span class="btn btn-primary ">next</span>
+            </button>
+            
+            <button *ngIf="step!=1" (click)="agregar()" >
+                <span class="btn btn-primary ">Ajouter</span>
+            </button>
+        </div>  
+            </div>
+
+
+        
+        </form>
+
+        <br>
+
+    </div>

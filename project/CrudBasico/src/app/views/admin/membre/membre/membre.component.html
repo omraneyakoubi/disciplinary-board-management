@@ -1,0 +1,44 @@
+<body>
+
+<div class="container">
+  <p>Ajouter un membre de etablissement pour chaque établissement un membre pour presenter l etablissement
+  </p>
+
+  <button routerLink="/admin/addmembre" type="button" class="btn btn-dark">Ajouter </button>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nom </th>
+        <th scope="col">Prénom</th>
+        <th scope="col">Email</th>
+        <th scope="col">Numéro</th>
+        <th scope="col">Mot de passe </th>
+        <th scope="col">Etablissement</th>
+        <th scope="col">Modifier</th>
+        <th scope="col">Supprimer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let member of memberList">
+        <td>{{member.id}}</td>
+        <td>{{member.nom}}</td>
+        <td>{{member.prenom}}</td>
+        <td>{{member.email}}</td>
+        <td>{{member.tel}}</td>
+        <td>{{member.mdp}}</td>
+        <td>{{member.etablissement}}</td>
+
+        <td>
+          <button (click)="edit(member)" type="button" class="btn btn-primary">Modifier</button>
+        </td>
+        <td>
+          <button (click)="eliminar(member.id)" type="button" class="btn btn-danger">Supprimer</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>

@@ -1,0 +1,134 @@
+  <p>Préparation De La réunion de Conseil De Discipline </p>
+
+  <button routerLink="/adminuniv/addutilisateur" type="button" class="btn btn-dark">Ajouter </button>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Establishment Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Role</th>
+      <th scope="col">Modifier</th>
+      <th scope="col">Supprimer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of dataarray; let i = index">
+      <td>{{ item.id }}</td>
+      <td>{{ item.nom }}</td>
+      <td>{{ item.prenom }}</td>
+      <td>{{ item.Nom_Etablissement }}</td>
+      <td>{{ item.email }}</td>
+      <td>{{ item.role }}</td>
+      <td>
+        <button (click)="getuser(item.id)"  type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Modifier</button>
+      </td>
+      <td>
+        <button (click)="deleteUser(item.id)" type="button" class="btn btn-danger">Supprimer</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!--form model-->
+        <form >
+
+          <div class="form-row">
+            <div class="name">Nom</div>
+            <div class="value">
+              <div class="input-group">
+                <input class="input--style-5" type="text" name="nom" [(ngModel)]="datausers.nom" required>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="name">Prenom</div>
+            <div class="value">
+              <div class="input-group">
+                <input class="input--style-5" type="text" name="prenom" [(ngModel)]="datausers.prenom"  required>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="name">Email</div>
+            <div class="value">
+              <div class="input-group">
+                <input class="input--style-5" type="email" name="email"[(ngModel)]="datausers.email"  required>
+              </div>
+            </div>
+          </div>
+          <div class="form-row m-b-55">
+            <div class="name">Mot De Passe</div>
+            <div class="value">
+              <div class="row row-refine">
+                <div class="col-9">
+                  <div class="input-group-desc">
+                    <input class="input--style-5" type="password" name="mdp"[(ngModel)]="datausers.mdp"  required>
+                    <label class="label--desc">Mot De Passe</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="name">Role</div>
+            <div class="value">
+              <div class="input-group">
+                <select class="form-select form-select-lg mb-3" aria-label="" [(ngModel)]="datausers.role" >
+                  <option value="">--choisir le role d'Utilisateur--</option>
+                  <option >etablissement</option>
+                  <option >membre</option>
+                  <option >université</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="name">Nom de l'établissement:</div>
+            <div class="value">
+              <div class="input-group">
+                <select class="form-select form-select-lg mb-3" [(ngModel)]="datausers.Nom_Etablissement" >
+                  <option value="">--Veuillez choisir une option--</option>
+                  <option>FSJEG Jendouba</option>
+                  <option>ISSH Jendouba</option>
+                  <option>ISMT kef</option>
+                  <option>ISEAH kef</option>
+                  <option>islai Beja</option>
+                  <option>isam Siliana</option>
+                  <option>isi kef</option>
+                  <option>isb Beja</option>
+                  <option>isp Tabarka</option>
+                  <option>issi kef</option>
+                  <option>esier Medjez El Bab</option>
+                </select>
+              </div>
+            </div>
+          </div>
+     
+          </form>
+        <!--form model-->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="update()">Save changes</button>
+        
+      </div>
+    </div>
+  </div>
+</div>

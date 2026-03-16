@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Easiest Way to Add Input Masks to Your Forms</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="registration-form">
+        <form>
+            <div class="form-icon">
+                <span><i class="icon icon-user"></i></span>
+            </div>
+            <div class="form-group">
+                <input   [(ngModel)]="membre.nom" name="1" type="text" class="form-control item" id="username" placeholder="nom">
+            </div>
+            <div class="form-group">
+                <input   [(ngModel)]="membre.prenom" name="2"  type="test" class="form-control item" id="password" placeholder="prénom">
+            </div>
+            <div class="form-group">
+                <input [(ngModel)]="membre.tel" name="3"  type="text" class="form-control item" id="email" placeholder="Numéro">
+            </div>
+            <div class="form-group">
+                <input [(ngModel)]="membre.email" name="4" type="text" class="form-control item" id="phone-number" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <input [(ngModel)]="membre.mdp" name="5"  type="text" class="form-control item" id="birth-date" placeholder="Mot de passe">
+            </div>
+
+            <select class="selectpicker" [(ngModel)]="membre.etablissement" name="6"  data-live-search="true">
+                <option value="">--Veuillez choisir une option--</option>
+                <option >FSJEG Jendouba</option>
+                <option >ISSH Jendouba</option>
+                <option >ISMT kef</option>
+                <option >ISEAH kef</option>
+                <option >islai Beja</option>
+                <option >isam Siliana</option>
+                <option >isi kef</option>
+                <option >isb Beja</option>
+                <option >isp Tabarka</option>
+                <option >issi kef</option>
+                <option >esier Medjez El Bab</option>
+              </select>
+              
+
+
+
+            <div class="form-group">
+                <button type="button"  (click)="modifierMembre()" routerLink="/admin/membre" class="btn btn-block create-account">Modifier Membre </button>
+                <button type="button"  routerLink="/admin/membre" class="btn btn-block create-account">RETOUR </button>
+
+            </div>
+        </form>
+       
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

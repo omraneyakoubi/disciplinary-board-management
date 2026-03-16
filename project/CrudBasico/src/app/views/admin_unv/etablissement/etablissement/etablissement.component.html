@@ -1,0 +1,46 @@
+<body>
+
+    <div class="container">
+      <p>Ajouter un établissement 
+      </p>
+  
+      <button routerLink="/adminuniv/addetablissement" type="button" class="btn btn-dark">Ajouter </button>
+  
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Adresse</th>
+            <th scope="col">Numéro</th>
+            <th scope="col">Email</th>
+  
+  
+            <th scope="col">Modifier</th>
+            <th scope="col">Supprimer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let etablissement of etablisList;index as i">
+            <td>{{etablissement.id}}</td>
+            <td>{{etablissement.nom}}</td>
+            <td>{{etablissement.adresse}}</td>
+            <td>{{etablissement.tel}}</td>
+            <td>{{etablissement.email}}</td>
+  
+  
+  
+            <td>
+              <button (click)="edit(etablissement)" type="button" class="btn btn-primary">Modifier</button>
+            </td>
+            <td>
+              <button  (click)="delete(etablissement.id,i)" type="button" class="btn btn-danger">Supprimer</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+  
+   
+  </body>
